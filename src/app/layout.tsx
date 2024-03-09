@@ -20,7 +20,6 @@ export const metadata = {
   manifest: "/site.webmanifest",
   safariPinnedTab: "/safari-pinned-tab.svg",
   msTileColor: "#000000",
-  themeColor: "#ffffff",
   font: pixelify.variable,
 };
 
