@@ -24,9 +24,6 @@ export default async function RoundLandingPage({
     <>
       <main className="flex min-h-screen flex-col items-center justify-center bg-black text-[yellow]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-5xl tracking-tight sm:text-[5rem]">
-            Välj omgång av stryktipset
-          </h1>
           <ul className="flex flex-row flex-wrap gap-4">
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
