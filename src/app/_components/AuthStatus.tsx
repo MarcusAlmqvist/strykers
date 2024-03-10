@@ -7,7 +7,7 @@ const AuthStatus = async () => {
   noStore();
   const session = await getServerAuthSession();
   return (
-    <div className="scroll:collapse z-10 flex w-full flex-row items-center justify-between gap-4 bg-[blue] p-4 shadow-sm sm:sticky sm:top-0">
+    <div className="scroll:collapse z-10 flex w-full flex-row items-center justify-between gap-4 bg-[blue] p-4 text-[yellow] shadow-sm sm:sticky sm:top-0 sm:px-24">
       <div className="flex flex-row items-center gap-4">
         {session?.user?.image && (
           <Image
@@ -19,19 +19,29 @@ const AuthStatus = async () => {
           />
         )}
         {session?.user?.name && (
-          <p className="text-center text-white">
+          <p className="text-center ">
             <span>{session.user?.name}</span>
           </p>
         )}
       </div>
-      {session?.user.id && (
-        <Link
-          href={"/round"}
-          className="px-10 py-3 font-semibold transition hover:underline"
-        >
-          Tidigare omgångar
-        </Link>
-      )}
+      <div className="flex flex-row items-center">
+        {session?.user.id && (
+          <Link
+            href={"/"}
+            className="px-10 py-3 font-semibold transition hover:underline"
+          >
+            Senaste omgången
+          </Link>
+        )}
+        {session?.user.id && (
+          <Link
+            href={"/round"}
+            className="px-10 py-3 font-semibold transition hover:underline"
+          >
+            Tidigare omgångar
+          </Link>
+        )}
+      </div>
       <Link
         href={session ? "/api/auth/signout" : "/api/auth/signin"}
         className="rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20"

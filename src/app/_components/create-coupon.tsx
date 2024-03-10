@@ -78,8 +78,8 @@ function CreateCoupon() {
       }}
       className="flex flex-col gap-2"
     >
-      <h2 className="text-2xl text-white">Registrera veckans stryk</h2>
-      <label className="text-white">Namn</label>
+      <h2 className="text-2xl text-[yellow]">Registrera veckans stryk</h2>
+      <label className="text-[yellow]">Namn</label>
       <input
         type="text"
         placeholder="Name"
@@ -92,7 +92,7 @@ function CreateCoupon() {
         }
         className="w-full rounded-full px-4 py-2 text-black"
       />
-      <label className="text-white">Beskrivning</label>
+      <label className="text-[yellow]">Beskrivning</label>
       <input
         type="text"
         placeholder="Description"
@@ -105,7 +105,7 @@ function CreateCoupon() {
         }
         className="w-full rounded-full px-4 py-2 text-black"
       />
-      <label className="text-white">Stryktyp</label>
+      <label className="text-[yellow]">Stryktyp</label>
       <input
         type="text"
         placeholder="Type"
@@ -118,7 +118,7 @@ function CreateCoupon() {
         }
         className="w-full rounded-full px-4 py-2 text-black"
       />
-      <label className="text-white">Status</label>
+      <label className="text-[yellow]">Status</label>
       <input
         type="text"
         placeholder="Status"

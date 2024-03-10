@@ -71,16 +71,16 @@ const LatestGames = () => {
               <Button
                 variant="outline"
                 className={cn("mr-1", {
-                  "bg-green-500": game.outcome === "1",
-                  "bg-gray-500": game.outcome === "2" || game.outcome === "X",
+                  "bg-green-700": game.outcome === "1",
+                  "bg-black": game.outcome === "2" || game.outcome === "X",
                 })}
               >
                 1
               </Button>
               <Button
                 className={cn("mr-1", {
-                  "bg-gray-500": game.outcome === "1" || game.outcome === "2",
-                  "bg-green-500": game.outcome === "X",
+                  "bg-black": game.outcome === "1" || game.outcome === "2",
+                  "bg-green-700": game.outcome === "X",
                 })}
                 variant="outline"
               >
@@ -89,8 +89,8 @@ const LatestGames = () => {
               <Button
                 variant="outline"
                 className={cn({
-                  "bg-gray-500": game.outcome === "1" || game.outcome === "X",
-                  "bg-green-500": game.outcome === "2",
+                  "bg-black": game.outcome === "1" || game.outcome === "X",
+                  "bg-green-700": game.outcome === "2",
                 })}
               >
                 2

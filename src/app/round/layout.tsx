@@ -19,12 +19,10 @@ export default async function RoundLandingPage({
   children: React.ReactNode;
 }) {
   noStore();
-  const session = await getServerAuthSession();
 
   return (
     <>
-      <AuthStatus />
-      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-[yellow]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl tracking-tight sm:text-[5rem]">
             Välj omgång av stryktipset
@@ -33,7 +31,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4831"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4830
               </Link>
@@ -41,7 +39,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4831"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4831
               </Link>
@@ -49,7 +47,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4832"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4832
               </Link>
@@ -57,7 +55,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4833"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4833
               </Link>
@@ -65,7 +63,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4834"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4834
               </Link>
@@ -73,7 +71,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4835"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4835
               </Link>
@@ -81,7 +79,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4836"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4836
               </Link>
@@ -89,7 +87,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4837"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4837
               </Link>
@@ -97,7 +95,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4838"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4838
               </Link>
@@ -105,7 +103,7 @@ export default async function RoundLandingPage({
             <li className="text-xs hover:animate-bounce hover:underline">
               <Link
                 href="/round/4839"
-                className="text-2xl font-semibold text-white"
+                className="text-2xl font-semibold text-[yellow]"
               >
                 Omgång 4839
               </Link>

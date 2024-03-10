@@ -5,7 +5,6 @@ import LatestCoupon from "./_components/latest-coupon";
 import AllUserCoupons from "./_components/all-user-coupons";
 import CreateCoupon from "./_components/create-coupon";
 import LatestGames from "./_components/latest-games";
-import AuthStatus from "./_components/AuthStatus";
 
 export default async function Home() {
   noStore();
@@ -13,7 +12,7 @@ export default async function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-[yellow]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <header className="flex flex-col items-center gap-2">
             <h1 className="text-5xl tracking-tight sm:text-[5rem]">STRYKERS</h1>
