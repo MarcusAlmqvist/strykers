@@ -4,6 +4,7 @@ import { Pixelify_Sans } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
 import { SessionProvider } from "next-auth/react";
+import AuthStatus from "./_components/AuthStatus";
 
 const pixelify = Pixelify_Sans({
   subsets: ["latin"],
@@ -32,7 +33,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${pixelify.variable}`}>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <AuthStatus />
+        <TRPCReactProvider>
+          <div className="pt-12">{children}</div>
+        </TRPCReactProvider>
       </body>
     </html>
   );
