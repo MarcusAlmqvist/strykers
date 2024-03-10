@@ -1,17 +1,15 @@
 import { unstable_noStore as noStore } from "next/cache";
 import Link from "next/link";
 
-import { CreatePost } from "@/app/_components/create-post";
 import { getServerAuthSession } from "@/server/auth";
 import Image from "next/image";
+import LatestCoupon from "./_components/latest-coupon";
+import AllUserCoupons from "./_components/all-user-coupons";
+import CreateCoupon from "./_components/create-coupon";
 
 export default async function Home() {
   noStore();
   const session = await getServerAuthSession();
-  //     name: 'Marcus Almqvist',
-  // email: 'marcus.w.almqvist@gmail.com',
-  // image: 'https://lh3.googleusercontent.com/a/ACg8ocLsizWQKMqjRY8XMcJBARff-2Tm6zxsA7Z5uiFER3QuLtI=s96-c',
-  // id: 'cltlh6qd00000h8h8yhxgycw9'
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
@@ -52,27 +50,10 @@ export default async function Home() {
 
         <div className="flex flex-col items-center gap-2"></div>
 
-        <CrudShowcase />
+        <LatestCoupon />
+        <AllUserCoupons />
+        {session?.user?.id && <CreateCoupon />}
       </div>
     </main>
-  );
-}
-
-async function CrudShowcase() {
-  const session = await getServerAuthSession();
-  if (!session?.user) return null;
-
-  // const latestPost = await api.post.getLatest.query();
-
-  return (
-    <div className="w-full max-w-xs">
-      {/* {latestPost ? (
-        <p className="truncate">Your most recent stryk: {latestPost.name}</p>
-      ) : (
-        <p>You have stryk yet.</p>
-      )} */}
-
-      <CreatePost />
-    </div>
   );
 }
