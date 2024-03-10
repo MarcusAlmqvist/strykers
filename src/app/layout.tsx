@@ -3,7 +3,6 @@ import "@/styles/globals.css";
 import { Pixelify_Sans } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
-import { SessionProvider } from "next-auth/react";
 import AuthStatus from "./_components/AuthStatus";
 
 const pixelify = Pixelify_Sans({

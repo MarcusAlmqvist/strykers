@@ -2,10 +2,6 @@
 import { unstable_noStore as noStore } from "next/cache";
 import Link from "next/link";
 
-import { getServerAuthSession } from "@/server/auth";
-import Image from "next/image";
-import AuthStatus from "../_components/AuthStatus";
-
 export const generateMetadata = () => {
   return {
     title: `Välj omgång av stryktipset`,
