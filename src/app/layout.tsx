@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import { Pixelify_Sans } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
-import AuthStatus from "./_components/AuthStatus";
+import { ThemeProvider } from "./_components/theme-provider";
 
 const pixelify = Pixelify_Sans({
   subsets: ["latin"],
@@ -26,16 +26,15 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body className={`font-sans ${pixelify.variable}`}>
-        <AuthStatus />
-        <TRPCReactProvider>
-          <div className="pt-12">{children}</div>
-        </TRPCReactProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
